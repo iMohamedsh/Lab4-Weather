@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka-processor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka-processor
+  template:
+    metadata:
+      labels:
+        app: kafka-processor
+    spec:
+      containers:
+        - name: kafka-processor
+          image: kafka-processor:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"

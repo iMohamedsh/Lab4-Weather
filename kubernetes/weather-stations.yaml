@@ -1,0 +1,240 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-1
+  template:
+    metadata:
+      labels:
+        app: weather-station-1
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["1"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-2
+  template:
+    metadata:
+      labels:
+        app: weather-station-2
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["2"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-3
+  template:
+    metadata:
+      labels:
+        app: weather-station-3
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["3"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-4
+  template:
+    metadata:
+      labels:
+        app: weather-station-4
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["4"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-5
+  template:
+    metadata:
+      labels:
+        app: weather-station-5
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["5"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-6
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-6
+  template:
+    metadata:
+      labels:
+        app: weather-station-6
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["6"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-7
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-7
+  template:
+    metadata:
+      labels:
+        app: weather-station-7
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["7"]
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-8
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-8
+  template:
+    metadata:
+      labels:
+        app: weather-station-8
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["8"]
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-9
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-9
+  template:
+    metadata:
+      labels:
+        app: weather-station-9
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["9"]
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-station-10
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-station-10
+  template:
+    metadata:
+      labels:
+        app: weather-station-10
+    spec:
+      containers:
+        - name: weather-station
+          image: weather-station:1.0
+          imagePullPolicy: Never
+          env:
+            - name: KAFKA_SERVER
+              value: "kafka-service:9092"
+          args: ["10"]
